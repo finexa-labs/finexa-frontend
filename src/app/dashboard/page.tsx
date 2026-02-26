@@ -4,6 +4,9 @@ import { CashFlowCard } from "@/components/metrics/CashFlowCard";
 import { MarginTable } from "@/components/metrics/MarginTable";
 import { getDashboardSummary } from "@/lib/api";
 
+// No pre-renderizar en build — requiere backend en runtime
+export const dynamic = "force-dynamic";
+
 export default async function DashboardPage() {
   const data = await getDashboardSummary();
 
