@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 3% 13%;
+    --foreground: 0 0% 100%;
+    --card: 240 4% 16%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 4% 16%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 263 48% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 3% 22%;
+    --muted-foreground: 240 5% 60%;
+    --accent: 263 84% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 4% 20%;
+    --input: 240 4% 20%;
+    --ring: 263 84% 58%;
+    --radius: 0.5rem;
+
+    --sidebar: 240 4% 11%;
+    --sidebar-foreground: 240 5% 60%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-active: 263 84% 58%;
+    --sidebar-active-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 0%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}

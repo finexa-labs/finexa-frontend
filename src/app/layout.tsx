@@ -1,12 +1,22 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  title: "Finexa Labs",
-  description: "Motor de decisiones financieras para e-commerce de moda",
+  title: "FINEXA — Motor de decisiones financieras",
+  description:
+    "Convertí datos operativos de e-commerce en decisiones financieras claras. Presupuesto seguro de ads, margen real y control de caja.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1F1F24",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -15,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className={inter.className}>{children}</body>
+    <html lang="es" className="dark">
+      <body className={`${inter.variable} font-sans`}>{children}</body>
     </html>
   );
 }

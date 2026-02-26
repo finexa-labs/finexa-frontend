@@ -1,57 +1,69 @@
 import { AppShell } from "@/components/layout/AppShell";
+import { FileDown, FileSpreadsheet, ShieldCheck, ClipboardList } from "lucide-react";
 
 const EXPORTS = [
   {
-    title: "Margen por SKU",
-    description: "Ingresos netos, costos y margen neto para cada producto.",
+    title: "Reporte de margen",
+    description: "Margen neto por SKU con detalle de costos, ingresos y comisiones.",
+    icon: FileSpreadsheet,
     endpoint: "/metrics/margin",
   },
   {
-    title: "Capital inmovilizado",
-    description: "Stock valorizado por SKU con días estimados hasta caja.",
+    title: "Snapshot de inventario",
+    description: "Stock valorizado por SKU con dias estimados a caja.",
+    icon: ClipboardList,
     endpoint: "/metrics/capital",
   },
   {
     title: "Recomendaciones",
-    description: "Historial de recomendaciones de presupuesto con explicación.",
+    description: "Historial completo de Ad Safe Budgets con calculo y riesgo.",
+    icon: ShieldCheck,
     endpoint: "/recommendations/history",
   },
   {
-    title: "Runs de ingesta",
-    description: "Log completo de sincronizaciones para auditoría.",
+    title: "Log de ingesta",
+    description: "Registro de sincronizaciones para auditoria y trazabilidad.",
+    icon: FileDown,
     endpoint: "/commerce/ingest/runs",
   },
 ];
 
 export default function ExportsPage() {
   return (
-    <AppShell>
-      <div className="p-6 space-y-6">
+    <AppShell title="Exports / Audit">
+      <div className="flex flex-col gap-6">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Exports</h1>
-          <p className="text-sm text-gray-500 mt-1">
-            Descargá cualquier cálculo en CSV para auditoría o análisis externo.
+          <p className="text-sm text-muted-foreground">
+            Auditable y reproducible. Descarga cualquier calculo en CSV.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {EXPORTS.map((exp) => (
-            <div
-              key={exp.endpoint}
-              className="bg-white rounded-xl border border-gray-200 p-5 flex items-start justify-between gap-4"
-            >
-              <div>
-                <h3 className="font-medium text-gray-900">{exp.title}</h3>
-                <p className="text-sm text-gray-500 mt-1">{exp.description}</p>
-              </div>
-              <a
-                href={`${process.env.NEXT_PUBLIC_API_URL}${exp.endpoint}?format=csv`}
-                className="shrink-0 px-3 py-1.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {EXPORTS.map((exp) => {
+            const Icon = exp.icon;
+            return (
+              <div
+                key={exp.endpoint}
+                className="flex items-start gap-4 rounded-lg border border-border bg-card p-5"
               >
-                CSV
-              </a>
-            </div>
-          ))}
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent/10">
+                  <Icon size={18} className="text-accent" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm font-medium text-foreground">
+                    {exp.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    {exp.description}
+                  </p>
+                  <button className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-border bg-secondary px-3 py-1.5 text-xs font-medium text-foreground hover:bg-secondary/80 transition-colors">
+                    <FileDown size={13} />
+                    Exportar CSV
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </AppShell>
