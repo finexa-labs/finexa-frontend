@@ -13,19 +13,22 @@ const PLATFORMS: { id: CommercePlatform; label: string }[] = [
   { id: "woocommerce", label: "WooCommerce" },
 ];
 
-const CREDENTIAL_FIELDS: Record<CommercePlatform, { key: string; label: string; placeholder: string }[]> = {
+const CREDENTIAL_FIELDS: Record<
+  CommercePlatform,
+  { key: string; label: string; placeholder: string; sensitive?: boolean }[]
+> = {
   tiendanube: [
     { key: "store_id",     label: "ID de tienda",    placeholder: "123456" },
-    { key: "access_token", label: "Access token",    placeholder: "tu-token-de-acceso" },
+    { key: "access_token", label: "Access token",    placeholder: "tu-token-de-acceso",    sensitive: true },
   ],
   shopify: [
     { key: "shop_domain",  label: "Dominio de tienda", placeholder: "mi-tienda.myshopify.com" },
-    { key: "access_token", label: "Access token",       placeholder: "shpat_xxxxxxxxxxxx" },
+    { key: "access_token", label: "Access token",       placeholder: "shpat_xxxxxxxxxxxx",   sensitive: true },
   ],
   woocommerce: [
-    { key: "site_url",        label: "URL del sitio",       placeholder: "https://mi-tienda.com" },
-    { key: "consumer_key",    label: "Consumer key",         placeholder: "ck_xxxxxxxxxxxx" },
-    { key: "consumer_secret", label: "Consumer secret",      placeholder: "cs_xxxxxxxxxxxx" },
+    { key: "site_url",        label: "URL del sitio",  placeholder: "https://mi-tienda.com" },
+    { key: "consumer_key",    label: "Consumer key",   placeholder: "ck_xxxxxxxxxxxx",  sensitive: true },
+    { key: "consumer_secret", label: "Consumer secret", placeholder: "cs_xxxxxxxxxxxx", sensitive: true },
   ],
 };
 
@@ -101,18 +104,24 @@ export default function OnboardingPage() {
               <p className="text-xs text-gray-400 uppercase tracking-wide font-medium">
                 Credenciales de {PLATFORMS.find((p) => p.id === selectedPlatform)?.label}
               </p>
-              {fields.map(({ key, label, placeholder }) => (
-                <div key={key} className="space-y-1">
-                  <label className="text-sm font-medium text-gray-700">{label}</label>
-                  <input
-                    type={key.includes("token") || key.includes("secret") ? "password" : "text"}
-                    placeholder={placeholder}
-                    value={credentials[key] ?? ""}
-                    onChange={(e) => handleCredentialChange(key, e.target.value)}
-                    className="w-full px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-finexa-500 focus:border-transparent"
-                  />
-                </div>
-              ))}
+              {fields.map(({ key, label, placeholder, sensitive }) => {
+                const inputId = `credential-${key}`;
+                return (
+                  <div key={key} className="space-y-1">
+                    <label htmlFor={inputId} className="text-sm font-medium text-gray-700">
+                      {label}
+                    </label>
+                    <input
+                      id={inputId}
+                      type={sensitive ? "password" : "text"}
+                      placeholder={placeholder}
+                      value={credentials[key] ?? ""}
+                      onChange={(e) => handleCredentialChange(key, e.target.value)}
+                      className="w-full px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-finexa-500 focus:border-transparent"
+                    />
+                  </div>
+                );
+              })}
             </div>
           )}
         </section>
