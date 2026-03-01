@@ -1,0 +1,439 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "ingestion": "Ingestion",
+    "costs": "Costs",
+    "adsSpend": "Ads Spend",
+    "recommendations": "Recommendations",
+    "exports": "Exports / Audit",
+    "settings": "Settings",
+    "movements": "Movements",
+    "expenses": "Expenses",
+    "recurring": "Recurring",
+    "reconciliation": "Weekly close",
+    "accounts": "Accounts"
+  },
+  "sidebar": {
+    "connected": "Connected",
+    "syncAgo": "Sync: {time} ago",
+    "sendFeedback": "Send feedback",
+    "ariaOpen": "Open menu",
+    "ariaClose": "Close menu",
+    "ariaExpand": "Expand sidebar",
+    "ariaCollapse": "Collapse sidebar"
+  },
+  "topbar": {
+    "thisWeek": "This week",
+    "sync": "Sync",
+    "export": "Export",
+    "ariaOpenMenu": "Open menu"
+  },
+  "lang": {
+    "es": "Español",
+    "en": "English",
+    "ariaSwitch": "Switch language"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "missingCosts": "Missing costs for {count} SKUs. Recommendation degrades.",
+    "simulateAds": "Simulate +20% Ads",
+    "netMargin": "Net margin",
+    "weekly": "weekly",
+    "tiedUpCapital": "Tied-up capital",
+    "inventoryCost": "inventory cost",
+    "availableCash": "Available cash",
+    "buffer": "buffer: {weeks} weeks"
+  },
+  "budget": {
+    "weeklyRecommended": "Recommended weekly budget",
+    "riskGreen": "Safe",
+    "riskYellow": "Caution",
+    "riskRed": "High risk"
+  },
+  "skuTable": {
+    "title": "Top SKUs",
+    "sku": "SKU",
+    "unitsSold": "Units sold",
+    "netMargin": "Net margin",
+    "marginPct": "Margin %",
+    "stock": "Stock",
+    "quality": "Quality",
+    "noCost": "No cost"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "empty": "No results",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "discard": "Discard",
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "back": "Back",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "optional": "optional",
+    "required": "required",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "expenses": {
+    "title": "Expenses",
+    "new": "New expense",
+    "edit": "Edit expense",
+    "amount": "Amount",
+    "currency": "Currency",
+    "date": "Date",
+    "account": "Account",
+    "category": "Category",
+    "counterparty": "Counterparty",
+    "note": "Note",
+    "tags": "Tags",
+    "status": "Status",
+    "origin": "Origin",
+    "statusConfirmed": "Confirmed",
+    "statusPending": "Pending",
+    "statusNeedsReview": "Needs category",
+    "needsReviewHint": "This expense has no category. Assign one to confirm it.",
+    "filterStatus": "Filter by status",
+    "noExpenses": "No expenses recorded",
+    "bulkUpload": "Bulk upload"
+  },
+  "counterparty": {
+    "label": "Counterparty",
+    "placeholder": "Search provider, employee...",
+    "createNew": "Create \"{name}\"",
+    "type": "Type",
+    "provider": "Provider",
+    "employee": "Employee",
+    "taxAgency": "Tax agency",
+    "other": "Other"
+  },
+  "recurring": {
+    "title": "Recurring",
+    "rules": "Rules",
+    "instances": "Instances",
+    "newRule": "New rule",
+    "editRule": "Edit rule",
+    "name": "Name",
+    "cadence": "Frequency",
+    "cadenceMonthly": "Monthly",
+    "cadenceWeekly": "Weekly",
+    "cadenceDaily": "Daily",
+    "cadenceYearly": "Yearly",
+    "dayOfMonth": "Day of month",
+    "dayOfWeek": "Day of week",
+    "autoConfirm": "Auto-confirm",
+    "defaultAccount": "Default account",
+    "nextDueDate": "Next due date",
+    "generate": "Generate instances",
+    "generateRange": "Generate for period",
+    "instancePending": "Pending",
+    "instanceConfirmed": "Confirmed",
+    "instanceSkipped": "Skipped",
+    "registerPayment": "Register payment",
+    "noRules": "No recurring rules",
+    "noInstances": "No instances for that period",
+    "statusActive": "Active",
+    "statusPaused": "Paused",
+    "statusArchived": "Archived"
+  },
+  "reconciliation": {
+    "title": "Weekly close",
+    "newSession": "New session",
+    "periodStart": "From",
+    "periodEnd": "To",
+    "declareBalances": "Declare balances",
+    "compute": "Calculate variances",
+    "closeSession": "Close week",
+    "sessionOpen": "Open",
+    "sessionClosed": "Closed",
+    "declared": "Declared",
+    "expected": "Expected",
+    "delta": "Variance",
+    "deltaOk": "No variance",
+    "deltaWarning": "Variance",
+    "suggestions": "Suggestions",
+    "confirmSuggestion": "Confirm",
+    "discardSuggestion": "Discard",
+    "suggestionProposed": "Proposed",
+    "suggestionConfirmed": "Confirmed",
+    "suggestionDiscarded": "Discarded",
+    "mvpHint": "In MVP, expected balance is based only on recorded expenses. Variance indicates missing information.",
+    "noSuggestions": "No suggestions — the week is balanced.",
+    "noSessions": "No close sessions",
+    "allHandled": "All suggestions processed. You can close the week.",
+    "pendingSuggestions": "{count} pending suggestion(s). Confirm or discard them before closing."
+  },
+  "bulk": {
+    "title": "Bulk upload",
+    "pasteOrUpload": "Paste CSV or upload file",
+    "csvFormat": "Format: account_id, amount_value, amount_currency, date, category_id (optional), note (optional)",
+    "preview": "Preview",
+    "upload": "Upload {count} expenses",
+    "errorsFound": "{count} row(s) with errors",
+    "success": "{count} expenses created successfully",
+    "rowError": "Row {row}: {error}"
+  },
+  "smartEntry": {
+    "label": "Smart Entry (Beta)",
+    "placeholder": "Describe the expense in plain text...",
+    "button": "Generate draft",
+    "tooltip": "Coming soon — will generate a draft from free text"
+  },
+  "ingestion": {
+    "title": "Ingestion",
+    "step0": {
+      "title": "What type of document are you importing?",
+      "hint": "This guides column auto-mapping, validations and commit target.",
+      "autoDetected": "Automatically detected",
+      "applyDetection": "Apply",
+      "confidenceHigh": "High",
+      "confidenceMedium": "Medium",
+      "confidenceLow": "Low",
+      "analysisOnly": "analysis only",
+      "unsure": "Not sure"
+    },
+    "documentKinds": {
+      "expenses_general": {
+        "title": "General expenses",
+        "description": "Regular business expenses (invoices, services, etc.)",
+        "example": "date, amount, detail"
+      },
+      "account_statement": {
+        "title": "Account statement",
+        "description": "Bank statement or MercadoPago/wallet movements",
+        "example": "date, debit/credit, balance"
+      },
+      "purchases_invoices": {
+        "title": "Purchase invoices",
+        "description": "Supplier purchases with invoice number",
+        "example": "date, supplier, invoice no., total"
+      },
+      "payroll": {
+        "title": "Payroll",
+        "description": "Salary and honorarium payroll",
+        "example": "employee, salary, period"
+      },
+      "sku_costs_simple": {
+        "title": "SKU costs",
+        "description": "Unit costs per SKU for the Costs module",
+        "example": "sku, unit_cost"
+      },
+      "ads_spend": {
+        "title": "Ads / Marketing spend",
+        "description": "Advertising spend (Meta Ads, Google Ads, etc.)",
+        "example": "week, platform, spend"
+      },
+      "inventory_snapshot": {
+        "title": "Inventory snapshot",
+        "description": "Stock state per SKU (analysis only in MVP)",
+        "example": "sku, stock"
+      },
+      "sales_export": {
+        "title": "Sales export",
+        "description": "Orders/sales export (analysis only in MVP)",
+        "example": "date, order, customer, total"
+      },
+      "generic_custom": {
+        "title": "Not sure",
+        "description": "Free format — configure the mapping manually",
+        "example": "any format"
+      }
+    },
+    "mapping": {
+      "kindHint": "Required fields for",
+      "invertSign": "Invert amount sign",
+      "invertSignHint": "Enable if debits appear as positive and you need to invert them.",
+      "missingRequired": "Missing mappings"
+    },
+    "review": {
+      "commitDisabledTitle": "Analysis only — this document type cannot be imported yet.",
+      "commitDisabledHint": "You can review the mapping and detected rows, but the import button is disabled in MVP.",
+      "skuCostPreview": "Cost preview",
+      "skusToLoad": "SKUs to load",
+      "commitCosts": "Load costs",
+      "commitExpenses": "Confirm and import expenses"
+    },
+    "documents": {
+      "title": "Import expenses from document",
+      "step1": "Source",
+      "step2": "Preview",
+      "step3": "Mapping",
+      "step4": "Review",
+      "newImport": "New import",
+      "csv": "CSV / Spreadsheet",
+      "sheets": "Google Sheets",
+      "dropzone": "Drag or click to select a CSV",
+      "paste": "Or paste the CSV content",
+      "connect": "Connect with Google",
+      "connected": "Connected as",
+      "columns": "Detected columns",
+      "preview5": "Preview (first 5 rows)",
+      "dateFormat": "Date format (optional)",
+      "autoDetect": "Auto-detect",
+      "mapping": "Map the document columns",
+      "mappingHint": "Indicate which column corresponds to each field. Date and Amount are required.",
+      "account": "Destination account",
+      "accountHint": "All imported expenses will be recorded in this account.",
+      "analyze": "Analyze",
+      "toImport": "to import",
+      "toSkip": "to skip",
+      "toReview": "to review",
+      "errors": "errors",
+      "reviewAmbiguous": "row(s) require review due to possible duplicate.",
+      "importAll": "Import all",
+      "skipAll": "Skip all",
+      "confirm": "Confirm and import",
+      "expenses": "expenses",
+      "done": "Import complete!",
+      "created": "Created",
+      "commitErrors": "rows with errors.",
+      "decisionImport": "Import",
+      "decisionSkip": "Skip",
+      "decisionReview": "Review",
+      "decisionError": "Error",
+      "dupWarning": "Possible duplicate (score: {score}%)"
+    }
+  },
+  "intelligence": {
+    "smartEntry": {
+      "draftReady": "Draft generated — review and confirm",
+      "draftConfirmed": "Draft confirmed. Opening form..."
+    },
+    "docAi": {
+      "kindSuggestion": "AI suggests:"
+    },
+    "errors": {
+      "intelligenceDisabled": "Intelligence module is disabled. Enable it in Settings → Intelligence.",
+      "smartEntryDisabled": "Smart Entry is disabled. Enable it in Settings → Intelligence.",
+      "docAiDisabled": "Doc AI is disabled. Enable it in Settings → Intelligence.",
+      "monthlyLimitExceeded": "Monthly token limit reached. Increase the limit in Settings → Intelligence."
+    }
+  },
+  "costs": {
+    "title": "Costs",
+    "tabs": {
+      "simple": "Simple",
+      "pro": "Pro (Manufacturing)"
+    },
+    "toolbar": {
+      "search": "Search SKU or name...",
+      "missingOnly": "Missing only",
+      "confidence": "Confidence",
+      "confidenceAll": "All",
+      "confidenceHigh": "High",
+      "confidenceMedium": "Medium",
+      "confidenceLow": "Low",
+      "bulkCsv": "Upload CSV",
+      "paste": "Paste table",
+      "massEdit": "Mass edit ({count})",
+      "importSkus": "Import SKUs",
+      "chipTotal": "{count} SKUs",
+      "chipMissing": "{count} missing",
+      "chipLowConf": "{count} low conf."
+    },
+    "table": {
+      "sku": "SKU",
+      "name": "Name / Variant",
+      "stock": "Stock",
+      "cost": "Unit cost",
+      "currency": "Currency",
+      "confidence": "Confidence",
+      "validFrom": "Valid from",
+      "status": "Status",
+      "actions": "Actions",
+      "stockEstimated": "estimated",
+      "statusOk": "OK",
+      "statusMissing": "Missing cost",
+      "statusLowConf": "Low confidence",
+      "noData": "No SKUs loaded.",
+      "importCta": "Import SKU catalog",
+      "loadMore": "Load more",
+      "showing": "Showing {from}–{to} of {total}",
+      "editPlaceholder": "0.00",
+      "savingHint": "Enter to save, Esc to cancel"
+    },
+    "bulk": {
+      "title": "Bulk upload (CSV)",
+      "description": "Upload a CSV file or paste the content directly.",
+      "dropzone": "Drag a CSV here or click to select",
+      "format": "Format: sku, product_name (optional), effective_unit_cost_value (optional), currency, cost_confidence, valid_from",
+      "example": "Example: SHIRT-001,Basic shirt,2400,ARS,high,2024-01-01",
+      "pasteLabel": "CSV content",
+      "pastePlaceholder": "sku,product_name,effective_unit_cost_value,...",
+      "preview": "Preview ({count} rows)",
+      "upload": "Upload {count} rows",
+      "resultCreated": "{count} created",
+      "resultUpdated": "{count} updated",
+      "resultErrors": "{count} errors",
+      "downloadErrors": "Download errors",
+      "noRows": "No valid rows detected"
+    },
+    "paste": {
+      "title": "Paste table",
+      "description": "Paste data copied from a spreadsheet (Excel, Google Sheets). Columns separated by tab or comma.",
+      "label": "Data",
+      "placeholder": "SHIRT-001\tBasic shirt\t2400\nJEAN-042\tSlim jean\t5800",
+      "preview": "Preview ({count} rows)",
+      "upload": "Upload {count} rows"
+    },
+    "massEdit": {
+      "title": "Mass edit — {count} SKU(s)",
+      "description": "Apply the same value to all selected SKUs.",
+      "action": "Action",
+      "actionSetCost": "Set unit cost",
+      "actionSetConfidence": "Set confidence",
+      "actionSetCurrency": "Set currency",
+      "newValue": "New value",
+      "clearCost": "Clear cost (null)",
+      "confirm": "Apply to {count} SKU(s)",
+      "success": "{count} SKUs updated"
+    },
+    "catalogImport": {
+      "title": "Import SKU catalog",
+      "description": "Load your SKU universe without costs. This way you can track which ones are 'missing'.",
+      "format": "Format: sku, product_name (optional), variant_name (optional)",
+      "example": "SHIRT-001,Basic shirt,Size M",
+      "label": "CSV or pasted data",
+      "placeholder": "sku,product_name,variant_name\nSHIRT-001,Basic shirt,Size M",
+      "upload": "Import {count} SKUs"
+    },
+    "pro": {
+      "banner": "Costs Pro (Manufacturing) — Coming soon",
+      "bannerDesc": "When Costs Pro is enabled, the BOM-calculated effective_unit_cost will replace manual values in dashboard and recommendations.",
+      "ctaDisabled": "Configure (coming soon)",
+      "cards": {
+        "bom": {
+          "title": "BOM — Materials",
+          "desc": "Calculate unit cost by summing all inputs: fabric, trims, packaging, shrinkage.",
+          "example": "1.2 m fabric ($800/m) + buttons ($50) + bag ($30) − 5% shrinkage = $1,030/u"
+        },
+        "roll": {
+          "title": "Roll / Batch",
+          "desc": "Prorate the cost of a roll or batch among units produced based on consumption.",
+          "example": "100 m roll at $80,000 → $800/m × 1.2 m = $960 per garment"
+        },
+        "routes": {
+          "title": "Production routes",
+          "desc": "Assign times per operation and cost per machine or labor minute.",
+          "example": "Cutting: 4 min × $45/min + Sewing: 8 min × $65/min = $700/u"
+        },
+        "overhead": {
+          "title": "Workshop overhead",
+          "desc": "Distribute fixed costs (energy, rent, depreciation) among units for the period.",
+          "example": "Monthly overhead $200,000 ÷ 500 garments = $400/u"
+        },
+        "versioning": {
+          "title": "Supplier versioning",
+          "desc": "Record price changes per supplier with validity dates. Access full history.",
+          "example": "Fabric Supplier A: $800/m until 03/31 → $950/m from 04/01"
+        }
+      }
+    }
+  }
+}

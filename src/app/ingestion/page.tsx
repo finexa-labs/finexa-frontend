@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { AppShell } from "@/components/layout/AppShell";
 import { cn } from "@/lib/utils";
 import {
@@ -11,9 +12,9 @@ import {
   Lock,
   CheckCircle2,
   XCircle,
-  Clock,
   Loader2,
 } from "lucide-react";
+import { DocumentIngestionWizard } from "@/modules/document-ingestion/DocumentIngestionWizard";
 
 const CONNECTORS = [
   {
@@ -57,8 +58,11 @@ const RUN_STATUS_CONFIG = {
   running: { label: "Ejecutando", icon: Loader2, color: "text-accent" },
 };
 
-export default function IngestionPage() {
+function IngestionContent() {
   const [mockEnabled, setMockEnabled] = useState(false);
+  const searchParams = useSearchParams();
+  const initialAccountId = searchParams.get("account") ?? undefined;
+  const initialKind = searchParams.get("kind") ?? undefined;
 
   return (
     <AppShell title="Ingestion">
@@ -142,6 +146,14 @@ export default function IngestionPage() {
           </button>
         </div>
 
+        {/* Document Ingestion Wizard */}
+        <div>
+          <h2 className="text-sm font-medium text-muted-foreground mb-3">
+            Importar gastos desde documento
+          </h2>
+          <DocumentIngestionWizard initialAccountId={initialAccountId} initialKind={initialKind} />
+        </div>
+
         {/* Runs history */}
         <div className="rounded-lg border border-border bg-card overflow-hidden">
           <div className="px-5 py-4 border-b border-border">
@@ -211,5 +223,13 @@ export default function IngestionPage() {
         </div>
       </div>
     </AppShell>
+  );
+}
+
+export default function IngestionPage() {
+  return (
+    <Suspense>
+      <IngestionContent />
+    </Suspense>
   );
 }

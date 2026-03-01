@@ -15,21 +15,13 @@ import {
   X,
   Activity,
   MessageSquare,
+  ArrowLeftRight,
+  RefreshCw,
+  CalendarCheck,
+  Wallet,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const NAV_ITEMS = [
-  { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { label: "Ingestion", href: "/ingestion", icon: Plug },
-  { label: "Costos", href: "/costs", icon: DollarSign },
-  { label: "Ads Spend", href: "/ads-spend", icon: Megaphone },
-  { label: "Recomendaciones", href: "/recommendations", icon: Lightbulb },
-  { label: "Exports / Audit", href: "/exports", icon: FileDown },
-];
-
-const ADMIN_ITEMS = [
-  { label: "Settings", href: "/settings", icon: Settings },
-];
+import { useT } from "@/contexts/LocaleContext";
 
 interface SidebarProps {
   collapsed: boolean;
@@ -38,8 +30,36 @@ interface SidebarProps {
   onMobileClose: () => void;
 }
 
+type NavItem = { labelKey: string; href: string; icon: React.ElementType };
+
+const NAV_GROUPS: NavItem[][] = [
+  [
+    { labelKey: "nav.dashboard",      href: "/dashboard",      icon: LayoutDashboard },
+    { labelKey: "nav.movements",      href: "/expenses",       icon: ArrowLeftRight  },
+    { labelKey: "nav.recurring",      href: "/recurring",      icon: RefreshCw       },
+    { labelKey: "nav.reconciliation", href: "/reconciliation", icon: CalendarCheck   },
+  ],
+  [
+    { labelKey: "nav.accounts",  href: "/accounts",  icon: Wallet },
+    { labelKey: "nav.ingestion", href: "/ingestion", icon: Plug   },
+  ],
+  [
+    { labelKey: "nav.costs",           href: "/costs",           icon: DollarSign },
+    { labelKey: "nav.adsSpend",        href: "/ads-spend",       icon: Megaphone  },
+    { labelKey: "nav.recommendations", href: "/recommendations", icon: Lightbulb  },
+    { labelKey: "nav.exports",         href: "/exports",         icon: FileDown   },
+  ],
+];
+
+const ADMIN_ITEMS: NavItem[] = [
+  { labelKey: "nav.settings", href: "/settings", icon: Settings },
+];
+
+const ALL_GROUPS = [...NAV_GROUPS, ADMIN_ITEMS];
+
 export function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose }: SidebarProps) {
   const pathname = usePathname();
+  const t = useT();
 
   const navContent = (
     <div className="flex h-full flex-col">
@@ -49,80 +69,50 @@ export function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose }: Side
           <span className="text-sm font-bold text-accent">FX</span>
         </div>
         {!collapsed && (
-          <span className="text-sm font-semibold tracking-wide text-foreground">
-            FINEXA
-          </span>
+          <span className="text-sm font-semibold tracking-wide text-foreground">FINEXA</span>
         )}
       </div>
 
       {/* Navigation */}
       <nav className="flex-1 overflow-y-auto px-3 py-4">
-        <ul className="flex flex-col gap-1">
-          {NAV_ITEMS.map(({ label, href, icon: Icon }) => {
-            const isActive = pathname === href || pathname.startsWith(href + "/");
-            return (
-              <li key={href}>
-                <Link
-                  href={href}
-                  onClick={onMobileClose}
-                  className={cn(
-                    "relative flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors",
-                    isActive
-                      ? "bg-secondary text-foreground"
-                      : "text-sidebar-foreground hover:bg-secondary/50 hover:text-foreground"
-                  )}
-                >
-                  {isActive && (
-                    <span className="absolute left-0 top-1/2 h-5 w-[3px] -translate-y-1/2 rounded-r-full bg-accent" />
-                  )}
-                  <Icon
-                    size={18}
-                    className={cn(
-                      "shrink-0",
-                      isActive ? "text-accent" : "text-sidebar-foreground"
-                    )}
-                  />
-                  {!collapsed && <span>{label}</span>}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-
-        {/* Separator */}
-        <div className="my-4 h-px bg-sidebar-border" />
-
-        <ul className="flex flex-col gap-1">
-          {ADMIN_ITEMS.map(({ label, href, icon: Icon }) => {
-            const isActive = pathname === href;
-            return (
-              <li key={href}>
-                <Link
-                  href={href}
-                  onClick={onMobileClose}
-                  className={cn(
-                    "relative flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors",
-                    isActive
-                      ? "bg-secondary text-foreground"
-                      : "text-sidebar-foreground hover:bg-secondary/50 hover:text-foreground"
-                  )}
-                >
-                  {isActive && (
-                    <span className="absolute left-0 top-1/2 h-5 w-[3px] -translate-y-1/2 rounded-r-full bg-accent" />
-                  )}
-                  <Icon
-                    size={18}
-                    className={cn(
-                      "shrink-0",
-                      isActive ? "text-accent" : "text-sidebar-foreground"
-                    )}
-                  />
-                  {!collapsed && <span>{label}</span>}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="flex flex-col gap-1">
+          {ALL_GROUPS.map((group, gi) => (
+            <div key={gi}>
+              {gi > 0 && <div className="my-2 h-px bg-sidebar-border/60" />}
+              <ul className="flex flex-col gap-1">
+                {group.map(({ labelKey, href, icon: Icon }) => {
+                  const isActive = pathname === href || pathname.startsWith(href + "/");
+                  return (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        onClick={onMobileClose}
+                        className={cn(
+                          "relative flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors",
+                          isActive
+                            ? "bg-secondary text-foreground"
+                            : "text-sidebar-foreground hover:bg-secondary/50 hover:text-foreground"
+                        )}
+                      >
+                        {isActive && (
+                          <span className="absolute left-0 top-1/2 h-5 w-[3px] -translate-y-1/2 rounded-r-full bg-accent" />
+                        )}
+                        <Icon
+                          size={18}
+                          className={cn(
+                            "shrink-0",
+                            isActive ? "text-accent" : "text-sidebar-foreground"
+                          )}
+                        />
+                        {!collapsed && <span>{t(labelKey)}</span>}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
+        </div>
       </nav>
 
       {/* Footer */}
@@ -131,15 +121,15 @@ export function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose }: Side
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
               <Activity size={12} className="text-success" />
-              <span>Conectado</span>
-              <span className="ml-auto">Sync: hace 2h</span>
+              <span>{t("sidebar.connected")}</span>
+              <span className="ml-auto">{t("sidebar.syncAgo", { time: "2h" })}</span>
             </div>
             <a
               href="#"
               className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               <MessageSquare size={12} />
-              <span>Enviar feedback</span>
+              <span>{t("sidebar.sendFeedback")}</span>
             </a>
           </div>
         ) : (
@@ -153,7 +143,7 @@ export function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose }: Side
       <button
         onClick={onToggle}
         className="hidden lg:flex items-center justify-center border-t border-sidebar-border py-2 text-muted-foreground hover:text-foreground transition-colors"
-        aria-label={collapsed ? "Expandir sidebar" : "Colapsar sidebar"}
+        aria-label={collapsed ? t("sidebar.ariaExpand") : t("sidebar.ariaCollapse")}
       >
         {collapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
       </button>
@@ -180,7 +170,7 @@ export function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose }: Side
         <button
           onClick={onMobileClose}
           className="absolute right-3 top-4 text-muted-foreground hover:text-foreground"
-          aria-label="Cerrar menu"
+          aria-label={t("sidebar.ariaClose")}
         >
           <X size={20} />
         </button>

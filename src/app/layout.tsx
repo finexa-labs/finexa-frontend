@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { LocaleProvider } from "@/contexts/LocaleContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="dark">
-      <body className={`${inter.variable} font-sans`}>{children}</body>
+      <body className={`${inter.variable} font-sans`}>
+        <LocaleProvider>{children}</LocaleProvider>
+      </body>
     </html>
   );
 }

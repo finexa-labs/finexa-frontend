@@ -1,0 +1,439 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "ingestion": "Ingesta",
+    "costs": "Costos",
+    "adsSpend": "Ads Spend",
+    "recommendations": "Recomendaciones",
+    "exports": "Exportar / Auditoría",
+    "settings": "Configuración",
+    "movements": "Movimientos",
+    "expenses": "Gastos",
+    "recurring": "Recurrentes",
+    "reconciliation": "Cierre semanal",
+    "accounts": "Cajas"
+  },
+  "sidebar": {
+    "connected": "Conectado",
+    "syncAgo": "Sync: hace {time}",
+    "sendFeedback": "Enviar feedback",
+    "ariaOpen": "Abrir menú",
+    "ariaClose": "Cerrar menú",
+    "ariaExpand": "Expandir sidebar",
+    "ariaCollapse": "Colapsar sidebar"
+  },
+  "topbar": {
+    "thisWeek": "Esta semana",
+    "sync": "Sincronizar",
+    "export": "Exportar",
+    "ariaOpenMenu": "Abrir menú"
+  },
+  "lang": {
+    "es": "Español",
+    "en": "English",
+    "ariaSwitch": "Cambiar idioma"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "missingCosts": "Faltan costos para {count} SKUs. La recomendación se degrada.",
+    "simulateAds": "Simular +20% Ads",
+    "netMargin": "Margen neto",
+    "weekly": "semanal",
+    "tiedUpCapital": "Capital inmovilizado",
+    "inventoryCost": "costo de inventario",
+    "availableCash": "Caja disponible",
+    "buffer": "buffer: {weeks} semanas"
+  },
+  "budget": {
+    "weeklyRecommended": "Presupuesto semanal recomendado",
+    "riskGreen": "Seguro",
+    "riskYellow": "Precaución",
+    "riskRed": "Riesgo alto"
+  },
+  "skuTable": {
+    "title": "Top SKUs",
+    "sku": "SKU",
+    "unitsSold": "Uds. vendidas",
+    "netMargin": "Margen neto",
+    "marginPct": "Margen %",
+    "stock": "Stock",
+    "quality": "Calidad",
+    "noCost": "Sin costo"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "empty": "Sin resultados",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "discard": "Descartar",
+    "create": "Crear",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "close": "Cerrar",
+    "back": "Volver",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "all": "Todos",
+    "optional": "opcional",
+    "required": "requerido",
+    "yes": "Sí",
+    "no": "No"
+  },
+  "expenses": {
+    "title": "Gastos",
+    "new": "Nuevo gasto",
+    "edit": "Editar gasto",
+    "amount": "Monto",
+    "currency": "Moneda",
+    "date": "Fecha",
+    "account": "Cuenta",
+    "category": "Categoría",
+    "counterparty": "Contraparte",
+    "note": "Nota",
+    "tags": "Etiquetas",
+    "status": "Estado",
+    "origin": "Origen",
+    "statusConfirmed": "Confirmado",
+    "statusPending": "Pendiente",
+    "statusNeedsReview": "Pendiente de categorizar",
+    "needsReviewHint": "Este gasto no tiene categoría. Asignala para confirmarlo.",
+    "filterStatus": "Filtrar por estado",
+    "noExpenses": "No hay gastos registrados",
+    "bulkUpload": "Carga masiva"
+  },
+  "counterparty": {
+    "label": "Contraparte",
+    "placeholder": "Buscar proveedor, empleado...",
+    "createNew": "Crear \"{name}\"",
+    "type": "Tipo",
+    "provider": "Proveedor",
+    "employee": "Empleado",
+    "taxAgency": "Agencia fiscal",
+    "other": "Otro"
+  },
+  "recurring": {
+    "title": "Recurrentes",
+    "rules": "Reglas",
+    "instances": "Ocurrencias",
+    "newRule": "Nueva regla",
+    "editRule": "Editar regla",
+    "name": "Nombre",
+    "cadence": "Periodicidad",
+    "cadenceMonthly": "Mensual",
+    "cadenceWeekly": "Semanal",
+    "cadenceDaily": "Diaria",
+    "cadenceYearly": "Anual",
+    "dayOfMonth": "Día del mes",
+    "dayOfWeek": "Día de la semana",
+    "autoConfirm": "Confirmar automáticamente",
+    "defaultAccount": "Cuenta por defecto",
+    "nextDueDate": "Próximo vencimiento",
+    "generate": "Generar ocurrencias",
+    "generateRange": "Generar para el período",
+    "instancePending": "Pendiente",
+    "instanceConfirmed": "Confirmado",
+    "instanceSkipped": "Omitido",
+    "registerPayment": "Registrar pago",
+    "noRules": "No hay reglas recurrentes",
+    "noInstances": "No hay ocurrencias para ese período",
+    "statusActive": "Activa",
+    "statusPaused": "Pausada",
+    "statusArchived": "Archivada"
+  },
+  "reconciliation": {
+    "title": "Cierre semanal",
+    "newSession": "Nueva sesión",
+    "periodStart": "Desde",
+    "periodEnd": "Hasta",
+    "declareBalances": "Declarar saldos",
+    "compute": "Calcular desvíos",
+    "closeSession": "Cerrar semana",
+    "sessionOpen": "Abierta",
+    "sessionClosed": "Cerrada",
+    "declared": "Declarado",
+    "expected": "Esperado",
+    "delta": "Desvío",
+    "deltaOk": "Sin desvío",
+    "deltaWarning": "Desvío",
+    "suggestions": "Sugerencias",
+    "confirmSuggestion": "Confirmar",
+    "discardSuggestion": "Descartar",
+    "suggestionProposed": "Propuesta",
+    "suggestionConfirmed": "Confirmada",
+    "suggestionDiscarded": "Descartada",
+    "mvpHint": "En MVP el esperado se basa solo en gastos registrados. El desvío indica información faltante.",
+    "noSuggestions": "Sin sugerencias — la semana está equilibrada.",
+    "noSessions": "No hay sesiones de cierre",
+    "allHandled": "Todas las sugerencias fueron procesadas. Podés cerrar la semana.",
+    "pendingSuggestions": "Hay {count} sugerencia(s) pendiente(s). Confirmalas o descartálas antes de cerrar."
+  },
+  "bulk": {
+    "title": "Carga masiva",
+    "pasteOrUpload": "Pegá el CSV o subí el archivo",
+    "csvFormat": "Formato: account_id, amount_value, amount_currency, date, category_id (opcional), note (opcional)",
+    "preview": "Vista previa",
+    "upload": "Cargar {count} gastos",
+    "errorsFound": "{count} fila(s) con error",
+    "success": "{count} gastos creados correctamente",
+    "rowError": "Fila {row}: {error}"
+  },
+  "smartEntry": {
+    "label": "Smart Entry (Beta)",
+    "placeholder": "Describí el gasto en lenguaje natural...",
+    "button": "Generar borrador",
+    "tooltip": "Disponible pronto — generará un borrador a partir de texto libre"
+  },
+  "ingestion": {
+    "title": "Ingesta",
+    "step0": {
+      "title": "¿Qué tipo de documento vas a importar?",
+      "hint": "Esto guía el auto-mapeo, validaciones y destino del commit.",
+      "autoDetected": "Detectado automáticamente",
+      "applyDetection": "Aplicar",
+      "confidenceHigh": "Alta",
+      "confidenceMedium": "Media",
+      "confidenceLow": "Baja",
+      "analysisOnly": "solo análisis",
+      "unsure": "No estoy seguro"
+    },
+    "documentKinds": {
+      "expenses_general": {
+        "title": "Gastos generales",
+        "description": "Gastos corrientes del negocio (facturas, servicios, etc.)",
+        "example": "fecha, monto, detalle"
+      },
+      "account_statement": {
+        "title": "Extracto de cuenta",
+        "description": "Extracto bancario o movimientos de MercadoPago/billetera",
+        "example": "fecha, débito/crédito, saldo"
+      },
+      "purchases_invoices": {
+        "title": "Facturas de compras",
+        "description": "Compras a proveedores con número de factura",
+        "example": "fecha, proveedor, nro. factura, total"
+      },
+      "payroll": {
+        "title": "Sueldos / Nómina",
+        "description": "Liquidación de sueldos y honorarios por empleado",
+        "example": "empleado, sueldo, período"
+      },
+      "sku_costs_simple": {
+        "title": "Costos por SKU",
+        "description": "Costos unitarios por SKU para el módulo de Costos",
+        "example": "sku, costo_unitario"
+      },
+      "ads_spend": {
+        "title": "Ads / Marketing spend",
+        "description": "Gastos en publicidad (Meta Ads, Google Ads, etc.)",
+        "example": "semana, plataforma, spend"
+      },
+      "inventory_snapshot": {
+        "title": "Snapshot de inventario",
+        "description": "Estado del stock por SKU (solo análisis en MVP)",
+        "example": "sku, stock"
+      },
+      "sales_export": {
+        "title": "Exportación de ventas",
+        "description": "Órdenes/ventas exportadas (solo análisis en MVP)",
+        "example": "fecha, orden, cliente, total"
+      },
+      "generic_custom": {
+        "title": "No estoy seguro",
+        "description": "Formato libre — configurá el mapeo manualmente",
+        "example": "cualquier formato"
+      }
+    },
+    "mapping": {
+      "kindHint": "Campos requeridos para",
+      "invertSign": "Invertir signo de montos",
+      "invertSignHint": "Activá si los débitos aparecen como positivos y necesitás invertirlos.",
+      "missingRequired": "Faltan mapear"
+    },
+    "review": {
+      "commitDisabledTitle": "Solo análisis — este tipo de documento todavía no se importa.",
+      "commitDisabledHint": "Podés revisar el mapeo y las filas detectadas, pero el botón de importar está deshabilitado en MVP.",
+      "skuCostPreview": "Preview costos",
+      "skusToLoad": "SKUs a cargar",
+      "commitCosts": "Cargar costos",
+      "commitExpenses": "Confirmar e importar gastos"
+    },
+    "documents": {
+      "title": "Importar gastos desde documento",
+      "step1": "Fuente",
+      "step2": "Vista previa",
+      "step3": "Mapeo",
+      "step4": "Revisión",
+      "newImport": "Nueva importación",
+      "csv": "CSV / Planilla",
+      "sheets": "Google Sheets",
+      "dropzone": "Arrastrá o hacé click para seleccionar un CSV",
+      "paste": "O pegá el contenido del CSV",
+      "connect": "Conectar con Google",
+      "connected": "Conectado como",
+      "columns": "Columnas detectadas",
+      "preview5": "Vista previa (primeras 5 filas)",
+      "dateFormat": "Formato de fecha (opcional)",
+      "autoDetect": "Auto-detectar",
+      "mapping": "Mapeá las columnas del documento",
+      "mappingHint": "Indicá qué columna corresponde a cada campo. Fecha y Monto son obligatorios.",
+      "account": "Cuenta destino",
+      "accountHint": "Todos los gastos importados se registrarán en esta cuenta.",
+      "analyze": "Analizar",
+      "toImport": "a importar",
+      "toSkip": "a omitir",
+      "toReview": "a revisar",
+      "errors": "errores",
+      "reviewAmbiguous": "fila(s) requieren revisión por posible duplicado.",
+      "importAll": "Importar todas",
+      "skipAll": "Omitir todas",
+      "confirm": "Confirmar e importar",
+      "expenses": "gastos",
+      "done": "¡Importación completa!",
+      "created": "Se crearon",
+      "commitErrors": "filas con error.",
+      "decisionImport": "Importar",
+      "decisionSkip": "Omitir",
+      "decisionReview": "Revisar",
+      "decisionError": "Error",
+      "dupWarning": "Posible duplicado (score: {score}%)"
+    }
+  },
+  "intelligence": {
+    "smartEntry": {
+      "draftReady": "Borrador generado — revisá y confirmá",
+      "draftConfirmed": "Borrador confirmado. Abriendo formulario..."
+    },
+    "docAi": {
+      "kindSuggestion": "La IA sugiere:"
+    },
+    "errors": {
+      "intelligenceDisabled": "El módulo de IA está desactivado. Habilitalo en Configuración → Inteligencia.",
+      "smartEntryDisabled": "Smart Entry está desactivado. Habilitalo en Configuración → Inteligencia.",
+      "docAiDisabled": "Doc AI está desactivado. Habilitalo en Configuración → Inteligencia.",
+      "monthlyLimitExceeded": "Límite mensual de tokens alcanzado. Aumentalo en Configuración → Inteligencia."
+    }
+  },
+  "costs": {
+    "title": "Costos",
+    "tabs": {
+      "simple": "Simple",
+      "pro": "Pro (Fabricación)"
+    },
+    "toolbar": {
+      "search": "Buscar SKU o nombre...",
+      "missingOnly": "Solo faltantes",
+      "confidence": "Confianza",
+      "confidenceAll": "Todas",
+      "confidenceHigh": "Alta",
+      "confidenceMedium": "Media",
+      "confidenceLow": "Baja",
+      "bulkCsv": "Cargar CSV",
+      "paste": "Pegar tabla",
+      "massEdit": "Edición masiva ({count})",
+      "importSkus": "Importar SKUs",
+      "chipTotal": "{count} SKUs",
+      "chipMissing": "{count} sin costo",
+      "chipLowConf": "{count} baja conf."
+    },
+    "table": {
+      "sku": "SKU",
+      "name": "Nombre / Variante",
+      "stock": "Stock",
+      "cost": "Costo unitario",
+      "currency": "Moneda",
+      "confidence": "Confianza",
+      "validFrom": "Vigencia desde",
+      "status": "Estado",
+      "actions": "Acciones",
+      "stockEstimated": "estimado",
+      "statusOk": "OK",
+      "statusMissing": "Falta costo",
+      "statusLowConf": "Baja confianza",
+      "noData": "No hay SKUs cargados.",
+      "importCta": "Importar catálogo de SKUs",
+      "loadMore": "Cargar más",
+      "showing": "Mostrando {from}–{to} de {total}",
+      "editPlaceholder": "0.00",
+      "savingHint": "Enter para guardar, Esc para cancelar"
+    },
+    "bulk": {
+      "title": "Carga masiva (CSV)",
+      "description": "Subí un archivo CSV o pegá el contenido directamente.",
+      "dropzone": "Arrastrá un CSV o hacé click para seleccionar",
+      "format": "Formato: sku, product_name (opcional), effective_unit_cost_value (opcional), currency, cost_confidence, valid_from",
+      "example": "Ejemplo: REMERA-001,Remera básica,2400,ARS,high,2024-01-01",
+      "pasteLabel": "Contenido del CSV",
+      "pastePlaceholder": "sku,product_name,effective_unit_cost_value,...",
+      "preview": "Vista previa ({count} filas)",
+      "upload": "Cargar {count} filas",
+      "resultCreated": "{count} creados",
+      "resultUpdated": "{count} actualizados",
+      "resultErrors": "{count} errores",
+      "downloadErrors": "Descargar errores",
+      "noRows": "No se detectaron filas válidas"
+    },
+    "paste": {
+      "title": "Pegar tabla",
+      "description": "Pegá datos copiados de una planilla (Excel, Google Sheets). Columnas separadas por tabulación o coma.",
+      "label": "Datos",
+      "placeholder": "REMERA-001\tRemera básica\t2400\nJEAN-042\tJean slim\t5800",
+      "preview": "Vista previa ({count} filas)",
+      "upload": "Cargar {count} filas"
+    },
+    "massEdit": {
+      "title": "Edición masiva — {count} SKU(s)",
+      "description": "Aplicar el mismo valor a todos los SKUs seleccionados.",
+      "action": "Acción",
+      "actionSetCost": "Establecer costo unitario",
+      "actionSetConfidence": "Establecer confianza",
+      "actionSetCurrency": "Establecer moneda",
+      "newValue": "Nuevo valor",
+      "clearCost": "Limpiar costo (null)",
+      "confirm": "Aplicar a {count} SKU(s)",
+      "success": "Se actualizaron {count} SKUs"
+    },
+    "catalogImport": {
+      "title": "Importar catálogo de SKUs",
+      "description": "Cargá el universo de SKUs sin necesidad de tener el costo. Así se podrá ver cuáles 'faltan'.",
+      "format": "Formato: sku, product_name (opcional), variant_name (opcional)",
+      "example": "REMERA-001,Remera básica,Talle M",
+      "label": "Datos CSV o pegado",
+      "placeholder": "sku,product_name,variant_name\nREMERA-001,Remera básica,Talle M",
+      "upload": "Importar {count} SKUs"
+    },
+    "pro": {
+      "banner": "Costos Pro (Fabricación) — Próximamente",
+      "bannerDesc": "Al activar Costos Pro, el effective_unit_cost calculado por BOM reemplazará el valor manual en dashboard y recomendaciones.",
+      "ctaDisabled": "Configurar (próximamente)",
+      "cards": {
+        "bom": {
+          "title": "BOM — Materiales",
+          "desc": "Calculá el costo por unidad sumando todos los insumos: tela, avíos, packaging, merma.",
+          "example": "1.2 m tela ($800/m) + botones ($50) + bolsa ($30) − merma 5% = $1.030/u"
+        },
+        "roll": {
+          "title": "Rollo / Lote",
+          "desc": "Prorrateá el costo de un rollo o lote entre las unidades producidas según consumo.",
+          "example": "Rollo 100 m a $80.000 → $800/m × 1.2 m = $960 por prenda"
+        },
+        "routes": {
+          "title": "Rutas de producción",
+          "desc": "Asigná tiempos por operación y costo por minuto de máquina o mano de obra.",
+          "example": "Corte: 4 min × $45/min + Costura: 8 min × $65/min = $700/u"
+        },
+        "overhead": {
+          "title": "Overhead del taller",
+          "desc": "Distribuí costos fijos (energía, alquiler, amortización) entre las unidades del período.",
+          "example": "Overhead mensual $200.000 ÷ 500 prendas = $400/u"
+        },
+        "versioning": {
+          "title": "Versionado por proveedor",
+          "desc": "Registrá cambios de precio por proveedor con fechas de vigencia. Accedé al historial.",
+          "example": "Tela Prov. A: $800/m hasta 31/03 → $950/m desde 01/04"
+        }
+      }
+    }
+  }
+}
