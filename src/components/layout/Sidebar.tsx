@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { LayoutDashboard, Settings, TrendingUp, Upload, FileDown } from "lucide-react";
+import { LayoutDashboard, Settings, TrendingUp, Upload, FileDown, Boxes } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "Dashboard",    href: "/dashboard",   icon: LayoutDashboard },
   { label: "Onboarding",   href: "/onboarding",  icon: Settings },
   { label: "Métricas",     href: "/metrics",     icon: TrendingUp },
+  { label: "Inventario",   href: "/inventory",   icon: Boxes },
   { label: "Cargar datos", href: "/uploads",     icon: Upload },
   { label: "Exports",      href: "/exports",     icon: FileDown },
 ];
