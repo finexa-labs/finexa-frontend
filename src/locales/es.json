@@ -11,7 +11,8 @@
     "expenses": "Gastos",
     "recurring": "Recurrentes",
     "reconciliation": "Cierre semanal",
-    "accounts": "Cajas"
+    "accounts": "Cajas",
+    "inventory": "Inventario"
   },
   "sidebar": {
     "connected": "Conectado",

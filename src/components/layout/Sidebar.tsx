@@ -19,6 +19,7 @@ import {
   RefreshCw,
   CalendarCheck,
   Wallet,
+  Boxes,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useT } from "@/contexts/LocaleContext";
@@ -40,8 +41,9 @@ const NAV_GROUPS: NavItem[][] = [
     { labelKey: "nav.reconciliation", href: "/reconciliation", icon: CalendarCheck   },
   ],
   [
-    { labelKey: "nav.accounts",  href: "/accounts",  icon: Wallet },
-    { labelKey: "nav.ingestion", href: "/ingestion", icon: Plug   },
+    { labelKey: "nav.accounts",   href: "/accounts",   icon: Wallet },
+    { labelKey: "nav.inventory",  href: "/inventory",  icon: Boxes  },
+    { labelKey: "nav.ingestion",  href: "/ingestion",  icon: Plug   },
   ],
   [
     { labelKey: "nav.costs",           href: "/costs",           icon: DollarSign },

@@ -11,7 +11,8 @@
     "expenses": "Expenses",
     "recurring": "Recurring",
     "reconciliation": "Weekly close",
-    "accounts": "Accounts"
+    "accounts": "Accounts",
+    "inventory": "Inventory"
   },
   "sidebar": {
     "connected": "Connected",
